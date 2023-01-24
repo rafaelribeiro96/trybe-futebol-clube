@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import validateJWT from '../auth/TokenHandler';
 import validateFields from '../middlewares/user.middleware';
-import * as userController from '../controllers/userController';
+import * as userController from '../controllers/user.Controller';
 
 const router = Router();
 

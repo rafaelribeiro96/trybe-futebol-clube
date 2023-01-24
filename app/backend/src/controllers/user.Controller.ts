@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { UserCredentials } from '../interfaces/Iuser';
-import * as userService from '../services/userService';
+import * as userService from '../services/user.Service';
 
 export async function login(req: Request, res: Response) {
   const userCredentials = req.body as UserCredentials;
