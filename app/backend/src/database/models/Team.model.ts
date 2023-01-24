@@ -8,23 +8,13 @@ class Team extends Model {
 }
 
 Team.init({
-  id: {
-    type: DataTypes.INTEGER,
-    autoIncrement: true,
-    primaryKey: true,
-  },
-  teamName: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-}, {
-  underscored: true,
-  sequelize: db,
-  modelName: 'Team',
-  timestamps: false,
-  tableName: 'teams',
-});
+  id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+  teamName: DataTypes.STRING,
+}, { underscored: true, sequelize: db, modelName: 'teams', timestamps: false });
 
-Team.hasMany(Match, { foreignKey: 'id', as: 'matchId' });
+Team.hasMany(Match, { foreignKey: 'homeTeamId', as: 'homeTeam' });
+Team.hasMany(Match, { foreignKey: 'awayTeamId', as: 'awayTeam' });
+Match.belongsTo(Team, { foreignKey: 'homeTeamId', as: 'homeTeam' });
+Match.belongsTo(Team, { foreignKey: 'awayTeamId', as: 'awayTeam' });
 
 export default Team;

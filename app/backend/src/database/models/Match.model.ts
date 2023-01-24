@@ -11,37 +11,17 @@ class Match extends Model {
 }
 
 Match.init({
-  id: {
-    type: DataTypes.INTEGER,
-    autoIncrement: true,
-    primaryKey: true,
-  },
-  homeTeamId: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-  },
-  homeTeamGoals: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-  },
-  awayTeamId: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-  },
-  awayTeamGoals: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-  },
-  inProgress: {
-    type: DataTypes.BOOLEAN,
-    allowNull: false,
-  },
+  id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+  homeTeamId: DataTypes.INTEGER,
+  homeTeamGoals: DataTypes.INTEGER,
+  awayTeamId: DataTypes.INTEGER,
+  awayTeamGoals: DataTypes.INTEGER,
+  inProgress: DataTypes.BOOLEAN,
 }, {
   underscored: true,
   sequelize: db,
-  modelName: 'Match',
+  modelName: 'matches',
   timestamps: false,
-  tableName: 'matchs',
 });
 
 export default Match;
