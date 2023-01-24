@@ -6,8 +6,9 @@ export const getMatches = async (inProgress: string | undefined) => {
   const matches = await MatchModel.findAll({ include: [
     { model: Team, as: 'homeTeam', attributes: ['teamName'] },
     { model: Team, as: 'awayTeam', attributes: ['teamName'] }] });
-  if (inProgress) { matches.filter((match) => match.inProgress.toString() === inProgress); }
-  return matches;
+  const filterMatches = matches.filter((match) => inProgress === undefined
+    || match.inProgress.toString() === inProgress);
+  return filterMatches;
 };
 
 export const saveMatch = async (match: IMatchCredentials) => {
