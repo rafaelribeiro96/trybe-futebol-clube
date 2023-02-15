@@ -1,13 +1,3 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+API REST para um site informativo de futebol, utilizando NODE.js, TypeScript e tecnologias como a ORM Sequelize com MySQL para manipular o banco de dados, JWT para geração de token vinculado ao usuário e a cobertura de testes com Mocha, Chai e Sinon. Além disso, apliquei conceitos de POO, SOLID, arquitetura MSC e utilizei o Docker para configuração de ambiente.
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
-
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+Dentre as funcionalidades da aplicação incluem login, classificação de equipes, filtragem de classificação, cadastro e alteração de partidas, visualização de tabela de jogos e filtragem de partidas.
